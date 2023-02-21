@@ -1,63 +1,67 @@
 import { useState } from 'react'
-import logo from './logo.svg';
 import './App.css';
 
+const cards = [
+  { front: 'Hello', back: 'Bonjour' },
+  { front: 'Good evening', back: 'Bonsoir' },
+  { front: 'Hi', back: 'Salut' },
+  { front: 'Goodbye', back: 'Au revoir' },
+  { front: 'Please', back: "S'il vous plaît" },
+  { front: 'Thank you', back: 'Merci' },
+  { front: "You're welcome", back: 'De rien' },
+  { front: 'See you tomorrow', back: 'A demain' },
+  { front: "Let's go!", back: 'Allons-y!' },
+  { front: 'How are you?', back: 'Comment allez-vous?' },
+];
+
 function App() {
-  const someCondition = false;
-  const shoppingListItems = ['Bread', 'Milk', 'Eggs'];
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
+  const [sideOfCard, setSideOfCard] = useState('front');
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>New text here {2 + 2}</p>
-        {someCondition && (<p>The condition was true</p>)}
-        {someCondition ? <p>The condition was true</p> : <p>The condition was false</p>}
+  const navigateToPreviousCard = () => {
+    setCurrentCardIndex(currentCardIndex => currentCardIndex - 1);
+  }
 
-        <Counter />
-        <Counter />
+  const navigateToNextCard = () => {
+    setCurrentCardIndex(currentCardIndex => currentCardIndex + 1);
+  }
 
-        <ol>
-          <li>Bread</li>
-          <li>Milk</li>
-          <li>Eggs</li>
-        </ol>
-
-        <ol>
-          {shoppingListItems.map(item => <li key={item}>{item}</li>)}
-        </ol>
-
-        <ShoppingList items={shoppingListItems} />
-        <ShoppingList items={['Oreos', 'Gummy Worms']} />
-      </header>
-    </div>
-  );
-}
-
-function ShoppingList(props) {
-  return (
-    <>
-      <h2>My shopping list</h2>
-      <ol>
-        {props.items.map(item => <li key={item}>{item}</li>)}
-      </ol>
-    </>
-  )
-}
-
-function Counter() {
-  const [count, setCount] = useState(0);
-
-  const incrementCounter = () => {
-    setCount(count => count + 1);
+  const flipCard = () => {
+    setSideOfCard(sideOfCard => sideOfCard === 'front' ? 'back' : 'front');
   }
 
   return (
-    <>
-      <h2>My Counter</h2>
-      <p>Count: {count}</p>
-      <button type="button" disabled={count >= 10} onClick={incrementCounter}>Increment Counter</button>
-    </>
-  )
+    <main className="app">
+      <h1>Flashcards Demo App</h1>
+      <div className="flashcardsContainer">
+        <button
+          type="button"
+          className="flashcardNavigationButton"
+          onClick={navigateToPreviousCard}
+          disabled={currentCardIndex === 0}
+          aria-label="Previous"
+        >
+          {'<<'}
+        </button>
+        <button
+          type="button"
+          className="card"
+          onClick={flipCard}
+        >
+          {cards[currentCardIndex][sideOfCard]}
+        </button>
+        <button
+          type="button"
+          className="flashcardNavigationButton"
+          onClick={navigateToNextCard}
+          disabled={currentCardIndex === cards.length - 1}
+          aria-label="Next"
+        >
+          {'>>'}
+        </button>
+      </div>
+    </main>
+  );
 }
 
 export default App;
