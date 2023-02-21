@@ -23,3 +23,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 3. Allow the user to add their own cards
 4. Fetch the card data from an external API
 5. Allow the user to mark if they knew or didn't know a card
+6. Allow the user to choose which language to see first
