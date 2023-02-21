@@ -4,6 +4,12 @@ Study a new language with this simple flashcard app. This app is part of a works
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Running the App Locally
+
+1. Clone the repo
+2. `npm install`
+3. `npm start`
+
 ## Product Requirements
 
 1. The app should take a list of card data consisting of info for the front and back of each card.
