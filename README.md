@@ -1,6 +1,6 @@
-# Flashcards Demo App
+# Flashcard Demo App
 
-Study a new language with this simple flashcards app. This app is part of a workshop I'm teaching called "React for Beginners".
+Study a new language with this simple flashcard app. This app is part of a workshop I'm teaching called "React for Beginners".
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

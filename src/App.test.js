@@ -3,5 +3,5 @@ import App from './App';
 
 test('renders the header text', () => {
   render(<App />);
-  expect(screen.getByText('Flashcards Demo App')).toBeInTheDocument();
+  expect(screen.getByText('Flashcard Demo App')).toBeInTheDocument();
 });

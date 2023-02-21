@@ -32,7 +32,7 @@ function App() {
 
   return (
     <main className="app">
-      <h1>Flashcards Demo App</h1>
+      <h1>Flashcard Demo App</h1>
       <div className="flashcardsContainer">
         <button
           type="button"
