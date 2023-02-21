@@ -16,7 +16,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1. The app should take a list of card data consisting of info for the front and back of each card.
 2. The user should be able to flip each card by clicking the card.
-3. The user should be able to navigate the stack of cards using the Previous and Next buttons
+3. The user should be able to navigate the stack of cards using the Previous and Next buttons.
+4. The Previous button should be disabled on the first card.
+5. The Next button should be disabled on the last card.
 
 ## Stretch Requirements (Not Implemented Yet)
 
