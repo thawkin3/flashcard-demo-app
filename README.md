@@ -2,6 +2,8 @@
 
 Study a new language with this simple flashcard app. This app is part of a workshop I'm teaching called "React for Beginners".
 
+![Flashcard App Demo](./Flashcard%20App%20Demo.gif)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Running the App Locally
