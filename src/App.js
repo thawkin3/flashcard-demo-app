@@ -20,10 +20,12 @@ function App() {
 
   const navigateToPreviousCard = () => {
     setCurrentCardIndex(currentCardIndex => currentCardIndex - 1);
+    setSideOfCard('front');
   }
 
   const navigateToNextCard = () => {
     setCurrentCardIndex(currentCardIndex => currentCardIndex + 1);
+    setSideOfCard('front');
   }
 
   const flipCard = () => {
